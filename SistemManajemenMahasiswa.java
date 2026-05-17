@@ -30,7 +30,7 @@ public class SistemManajemenMahasiswa {
         System.out.println("======= TAMBAH DATA MAHASISWA =======");
         hashTable.insert(12344, "Andika",  3.60);
         hashTable.insert(12345, "Andi",    3.75);
-        hashTable.insert(12346, "Cedric",  3.85);
+        hashTable.insert(12346, "Cedric",  3.97);
         hashTable.insert(12347, "David",   3.90);
         hashTable.insert(12348, "Lulu",    3.95);
         hashTable.insert(12349, "Rafli",   3.97);
@@ -38,7 +38,8 @@ public class SistemManajemenMahasiswa {
         hashTable.insert(12351, "Teresa",  3.65);
         hashTable.insert(12352, "Vioka",   3.70);
         hashTable.insert(12353, "Xavier",  3.50);
-
+        hashTable.insert(12354, "Wagner",  3.85);
+        hashTable.insert(12355, "Yvonne",  3.80);
         hashTable.display();
 
         System.out.println("\n======= SEARCH DATA =======");
@@ -60,7 +61,7 @@ public class SistemManajemenMahasiswa {
         System.out.println("\n======= INSERT KE BST =======");
         bst.insert(12344, "Andika",  3.60);
         bst.insert(12345, "Andi",    3.75);
-        bst.insert(12346, "Cedric",  3.85);
+        bst.insert(12346, "Cedric",  3.97);
         bst.insert(12347, "David",   3.90);
         bst.insert(12348, "Lulu",    3.95);
         bst.insert(12349, "Rafli",   3.97);
@@ -68,6 +69,8 @@ public class SistemManajemenMahasiswa {
         bst.insert(12351, "Teresa",  3.65);
         bst.insert(12352, "Vioka",   3.70);
         bst.insert(12353, "Xavier",  3.50);
+        bst.insert(12354, "Wagner",  3.85);
+        bst.insert(12355, "Yvonne",  3.80);
 
         System.out.println("\n======= INORDER TRAVERSAL BST =======");
         bst.inorderTraversal(bst.root);
@@ -98,9 +101,16 @@ public class SistemManajemenMahasiswa {
         graph.addEdge("C", "E", 3);
         graph.addEdge("E", "D", 4);
         graph.addEdge("D", "F", 11);
+        graph.addEdge("E", "F", 2);
+        graph.addEdge("A", "F", 15);
+        graph.addEdge("B", "E", 1);
+        graph.addEdge("C", "B", 8);
+        graph.addEdge("D", "B", 7);
 
-        graph.computeShortestPath("A", "E");
-        graph.computeShortestPath("A", "D");
-        graph.computeShortestPath("A", "F");
+        graph.computeShortestPath("A", "C");
+        graph.computeShortestPath("B", "E");
+        graph.computeShortestPath("E", "D");
+        graph.computeShortestPath("C", "A");
+        graph.computeShortestPath("D", "F");
     }
 }
