@@ -25,7 +25,7 @@ public class SistemManajemenMahasiswa {
     public static void main(String[] args) {
 
         // ======= HASH TABLE =======
-        HashTable hashTable = new HashTable(10);
+        HashTable hashTable = new HashTable(12);
 
         System.out.println("======= TAMBAH DATA MAHASISWA =======");
         hashTable.insert(12344, "Andika",  3.60);
@@ -164,9 +164,9 @@ public class SistemManajemenMahasiswa {
 
         if (hashTime < bstTime && hashTime < graphTime) {
             System.out.println("Hash Table memiliki pencarian tercepat.");
-        }
-
-        if (bstTime < graphTime) {
+        } else if (bstTime < hashTime && bstTime < graphTime) {
+            System.out.println("BST memiliki pencarian tercepat.");
+        } else if (bstTime < graphTime) {
             System.out.println("BST lebih cepat dibanding Graph.");
         }
 
